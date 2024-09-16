@@ -10,8 +10,17 @@ Given("I open the main page", function () {
     Cypress.on(`uncaught:exception`,(err,runnable) =>{
         return false;
     });
-    Then("The url should be correct", function () {
+Then("The url should be correct", function () {
         mainPage.classCheckUrl();
     });
+Then("The header elements should be correct", function (){
+   mainPage.classSectionHeader()
+});
+Then ("The header icon should be visible", function (){
+    mainPage.classHeaderIcon()
+});
+Then("The header logo should be visible", function (){
+    mainPage.classHeaderLogo()
+});
 
 })
